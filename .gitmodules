@@ -1,0 +1,6 @@
+[submodule "blog-admin"]
+	path = blog-admin
+	url = git@github.com:tult98/blog-admin.git
+[submodule "blog-frontend"]
+	path = blog-frontend
+	url = git@github.com:tult98/blog-frontend.git
