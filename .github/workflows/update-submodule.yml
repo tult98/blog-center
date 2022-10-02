@@ -2,7 +2,7 @@ name: Update submodules on repository_dispatch
 
 on:
   repository_dispatch:
-    types: [ sync-shared-submodules ] 
+    types: [ sync-shared-submodule ] 
 
 env:
   COMMIT_MESSAGE: "chore: update submodules"
