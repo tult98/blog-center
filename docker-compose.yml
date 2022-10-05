@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  blog-frontend:
+    build:
+      context: ./services/blog-frontend
+      dockerfile: Dockerfile
+    image: blog-frontend:latest
+    container_name: blog-frontend
+    ports:
+      - 3000:3000
