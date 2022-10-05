@@ -32,4 +32,4 @@ git commit "Update submodule"
 git push
 ```
 
-**Note**: This has been done automated by using Github action.
+**Note**: This has been done automatically by using Github action.
