@@ -6,8 +6,7 @@ def dev(service_name):
 #    Step 2: Run a container in interactive shell
     container_name = '_'.join(service_name.split('-'))
     try:
-        container = docker.container.inspect(container_name)
-        if container.state.running:
+        if docker.container.exists(container_name):
             container.remove(force=True)
         docker.compose.run(service=service_name, name=container_name, service_ports=True, tty=True, remove=True, command=["sh"])
     except Exception as e:

@@ -7,8 +7,24 @@ services:
       dockerfile: Dockerfile
     image: blog-frontend:latest
     container_name: blog_frontend
+    volumes:
+      - ./services/blog-frontend:/usr/src/app
     ports:
       - 3000:3000
+  blog-api:
+    build:
+      context: ./services/blog-api
+      dockerfile: Dockerfile
+    image: blog-api:latest
+    container_name: blog_api
+    volumes:
+      - ./services/blog-api:/usr/src/app
+    ports:
+      - 4000:4000
+    env_file:
+      - ./services/blog-api/.env
+    environment:
+      - DEV_DB_HOST=db
   db:
     image: mysql
     container_name: db
