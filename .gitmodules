@@ -1,12 +1,6 @@
-[submodule "services/blog-admin"]
-	path = services/blog-admin
-	url = git@github.com:tult98/blog-admin.git
 [submodule "services/blog-frontend"]
 	path = services/blog-frontend
 	url = git@github.com:tult98/blog-frontend.git
-[submodule "blog-api"]
-	path = blog-api
-	url = git@github.com:tult98/blog-api.git
 [submodule "services/blog-api"]
 	path = services/blog-api
 	url = git@github.com:tult98/blog-api.git
