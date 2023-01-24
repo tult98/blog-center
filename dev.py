@@ -7,7 +7,7 @@ def dev(service_name):
     container_name = '_'.join(service_name.split('-'))
     try:
         if docker.container.exists(container_name):
-            container.remove(force=True)
+            docker.container.remove([container_name], force=True)
         docker.compose.run(service=service_name, name=container_name, service_ports=True, tty=True, remove=True, command=["sh"])
     except Exception as e:
         print(e)
