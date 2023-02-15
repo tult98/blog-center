@@ -1,4 +1,5 @@
 # blog-center
+
 This is the central repository for `blog-admin` and `blog-frontend`.
 
 ## Getting started
@@ -6,6 +7,7 @@ This is the central repository for `blog-admin` and `blog-frontend`.
 ### Download Git Repositories
 
 Prepare an ssh key for downloading Github repository
+
 ```
 ssh-keygen
 cat ~/.ssh/id_rsa.pub
@@ -13,14 +15,33 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 Download submodules of this central repository
+
 ```
 git submodule update --init --recursive
 ```
 
-Then, pull the latest code for each submodule by 
+Then, pull the latest code for each submodule by
 
 ```
 git submodule foreach "git checkout master && git pull origin master"
+```
+
+Make `dev.py` file executable
+
+```
+chmod +x dev.py
+```
+
+Run all services
+
+```
+docker compose up -d
+```
+
+Run a specific service in interactive shell by the following command
+
+```
+./dev.py dev <service-name>
 ```
 
 When there are changes to submodules. You will have to update the parent repository in case you'd like others can pulldown the latest with `git submodule update` command.
