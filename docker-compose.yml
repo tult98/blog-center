@@ -20,6 +20,7 @@ services:
     volumes:
       - ./services/blog-api/src:/usr/src/app/src
       - ./services/blog-api/.env:/usr/src/app/.env
+      - ./services/blog-api/package.json:/usr/src/app/package.json
     ports:
       - 4000:4000
     env_file:
