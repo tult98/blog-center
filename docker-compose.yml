@@ -8,7 +8,11 @@ services:
     image: blog-frontend:latest
     container_name: blog-frontend # it must be the same as service name -> able to call queries/mutations inside next-auth provider
     volumes:
-      - ./services/blog-frontend:/usr/src/app
+      - ./services/blog-frontend/src:/usr/src/app/src
+      - ./services/blog-frontend/pages:/usr/src/app/pages
+      - ./services/blog-frontend/public:/usr/src/app/public
+      - ./services/blog-frontend/styles:/usr/src/app/styles
+      - ./services/blog-frontend/middleware.ts:/usr/src/app/middleware.ts
     ports:
       - 3000:3000
   blog-api:
